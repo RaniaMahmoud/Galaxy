@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+}
+/* body{
+    background: url(/source/pexels-quintin-gellar-313782.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+    margin: 0;
+} */
+.fa-atom{
+padding-top: 10%;
+color: #dc3545;
+font-size: 9rem;
+padding-bottom: 6%;
+}
+.container-fluid{
+    padding: 0;
+    margin: 0;
+}
+.fullpage{
+    text-align: center;
+}
+.title{
+    font-weight: bold;
+}
+.cardcustem{
+    background-color:#f8f9fa;
+}
