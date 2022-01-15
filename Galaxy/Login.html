@@ -54,7 +54,7 @@
                                 </div>
                             </div>
                             <div class="d-grid gap-2 col-6 mx-auto pt-4">
-                                <a href="index.html" class="btn btn-dark">LogIn</a>
+                                <a href="index.html" id="Submit" class="btn btn-dark">LogIn</a>
                             </div>
                           </form>
                     </div>
@@ -81,7 +81,32 @@
     <script> 
         var user=document.getElementById("floatingInput");
         user.addEventListener("blur",check)
+        var checkData=document.getElementById("Submit");
+        checkData.addEventListener("click",checkBeforSubmit)
         var pattern=/^[a-z]{5}$/igm
+        function checkBeforSubmit(){
+          var val=user.value
+            // alert(val)
+            var flag=pattern.test(val)
+            // alert(f)
+            if(!flag){
+              var forms = document.querySelectorAll('.needs-validation')
+              //alert(forms)
+              // Loop over them and prevent submission
+              Array.prototype.slice.call(forms)
+                  .forEach(function (form) {
+                    //alert(form)
+                      if (!form.checkValidity()) {
+                        //alert("Informs")
+                        event.preventDefault()
+                        event.stopPropagation()
+                      }
+                      //alert('out')
+                      form.classList.add('was-validated')
+                  })
+            }
+        }
+        
         function check(){
             var val=user.value
             // alert(val)
